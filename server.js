@@ -10,17 +10,16 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  res.send('Hello to number validator!');
 });
 
 app.get('/square', validateNumber(), (req, res) => {
   const number = req.squareNum;
   res.status(200).json({ num: number });
-  
-
 });
 
 app.use(errorHandler);
+
 
 function start(port) {
   app.listen(port, () => {
