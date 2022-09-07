@@ -13,6 +13,8 @@ app.get('/', (req, res) => {
   res.send('Hello to number validator!');
 });
 
+// Routes
+
 app.get('/square', validateNumber(), (req, res) => {
   const number = req.squareNum;
   res.status(200).json({ num: number });
